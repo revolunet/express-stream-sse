@@ -2,13 +2,13 @@
 
 ![npm](https://img.shields.io/npm/v/express-stream-sse.svg) ![license](https://img.shields.io/npm/l/express-stream-sse.svg) ![github-issues](https://img.shields.io/github/issues/revolunet/express-stream-sse.svg) ![Circle CI build status](https://circleci.com/gh/revolunet/express-stream-sse.svg?style=svg)
 
-Convert NodeJS streams to Server-Sent Events express routes
+Convert NodeJS streams to Server-Sent Events express routes (EventSource)
 
 ![nodei.co](https://nodei.co/npm/express-stream-sse.png?downloads=true&downloadRank=true&stars=true)
 
 ## Install
 
-`npm i -S `
+`npm i -S express-stream-sse`
 
 ## Usage
 
@@ -33,7 +33,10 @@ app.listen(process.env.PORT || 4000);
 Then on the client side you can :
 
 ```js
-
+var source = new EventSource('/events');
+source.onmessage = function(e) {
+  document.body.innerHTML += e.data + '<br>';
+};
 
 ```
 
