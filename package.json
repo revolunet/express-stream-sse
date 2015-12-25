@@ -1,6 +1,6 @@
 {
   "name": "express-stream-sse",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Convert NodeJS streams to Server-Sent Events express routes (EventSource)",
   "license": "MIT",
   "repository": "revolunet/express-stream-sse",
